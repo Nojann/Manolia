@@ -31,7 +31,7 @@
     gap: var(--spacing-l);
   }
 
-  list{
+  .list{
     display: flex;
     flex-direction: column;
     gap:var(--spacing-m);
