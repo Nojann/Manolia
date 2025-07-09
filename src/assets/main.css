@@ -1,0 +1,88 @@
+@import './base.css';
+
+#app {
+  font-weight: normal;
+}
+
+main{
+  margin-top: var(--spacing-l);
+  margin-inline: auto;
+  max-width: 1400px;
+}
+
+/*Basics elements*/
+
+input, textarea {
+  border: 1px solid #D0D0D0;
+  padding-left: var(--spacing-s);
+  font-family: "Overpass Mono", serif;
+}
+
+input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+
+*::-webkit-input-placeholder{
+  font-family: "Overpass Mono", serif;
+}
+
+textarea{
+  resize: none;
+  width: auto;
+  padding: var(--spacing-s);
+}
+
+textarea:focus {
+  border: 1px solid black;
+  outline: none;
+}
+
+h1{
+  font-family: Righteous, serif;
+  font-size: 32px;
+}
+
+h2{
+  width: var(--width-small);
+  font-size: 24px;
+  font-family: "Overpass Medium", serif;
+  padding-bottom: var(--spacing-s);
+  border-bottom: 1px solid;
+}
+
+h3{
+  font-family: "Overpass Light", serif;
+}
+
+/*Utility*/
+.text-action {
+  height:auto;
+  font-family:
+    Overpass Light,
+    serif;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.text-small{
+  font-size: small;
+  font-family: "Overpass Mono", serif;
+}
+
+.u_bg-dark{
+  background: var(--color-dark);
+  color: var(--color-background);
+}
+
+/*Wrappers*/
+.w_wrapper-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
