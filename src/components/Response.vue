@@ -14,7 +14,7 @@
 
 <template>
   <div class="response-wrapper">
-    <h2>Response</h2>
+    <h2>Answer</h2>
     <div v-show="useResponseStore().response" class="text-wrapper">
       <h3 class="query">{{ useQueryStore().query }}</h3>
       <p class="response">{{ useResponseStore().response }}</p>

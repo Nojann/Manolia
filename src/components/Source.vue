@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { useSourcesStore } from '@/store/SourceStore.ts'
   import SourceForm from '@/components/SourceForm.vue'
+  import type { Metadata } from '@/types/SourceTypes.ts'
 
   const sourcesStore = useSourcesStore()
 
@@ -10,6 +11,13 @@
     return lastSpace !== -1 ? str.slice(0, lastSpace) : str
   }
 
+  const metadataPreviewer = (metadata: Metadata) : string => {
+    const creator: string = metadata.creator && (metadata.date || metadata.title ? metadata.creator + ", " : metadata.creator) || ''
+    const date: string = metadata.date && (metadata.title ? `(${metadata.date}). ` : `(${metadata.date})`) || ''
+    const title: string = metadata.title ?? ''
+    return `${creator}${date}${title}`
+  }
+
 </script>
 
 <template>
@@ -17,7 +25,7 @@
     <h2>Sources</h2>
     <ul v-show="sourcesStore.sourceList" class="list">
       <li class="element" v-for="(source, index) in sourcesStore.sourceList" :key="index">
-        <p>{{source.metadata.creator}}, ({{source.metadata.date}}). <i>{{source.metadata.title}}</i></p>
+        <p>{{metadataPreviewer(source.metadata)}}</p>
         <p class="text-small">{{contentPreviewer(source.text)}}...</p>
       </li>
     </ul>
