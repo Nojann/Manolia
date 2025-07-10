@@ -6,7 +6,7 @@
 
   const handleReturn = async () => {
     useUIStore().columnState = 'tools'
-    useResponseStore().response =''
+    useResponseStore().response = ''
     await runReasoner()
   }
 

@@ -9,9 +9,9 @@
 
 <template>
   <div class="wrapper">
+    <Source/>
     <Tools v-if="(UIStore.columnState==='tools')"/>
     <Response v-if="(UIStore.columnState==='response')"/>
-    <Source/>
   </div>
 </template>
 

@@ -32,8 +32,7 @@
 </script>
 
 <template>
-  <ButtonAction :icon="TextCursorInput" text="ask source base" v-show="!isOpen" @click="toggleOpen"/>
-
+  <ButtonAction :icon="TextCursorInput" text="Query" v-show="!isOpen" @click="toggleOpen"/>
   <div class="wrapper" v-show="isOpen" >
     <form class="form" @submit.prevent="handleSubmit">
       <span class="w_wrapper-icon u_bg-dark">
